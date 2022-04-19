@@ -1,26 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
+import { isPropertySignature } from 'typescript';
 import './App.css';
+import Input from './components/Input'
+import Confirmation from "./pages/Confirmation";
+import Login from "./pages/Login";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const MOCK_DATA = [
+    {
+      id: 1,
+      image: "https://tinypng.com/images/social/website.jpg",
+      text: "",
+      date: "",
+      lesson_num: 0,
+      title: "",
+      author: 0,
+    },
+    {
+      id: 2,
+      image: "https://tinypng.com/images/social/website.jpg",
+      text: "",
+      date: "",
+      lesson_num: 0,
+      title: "",
+      author: 0,
+    },
+    {
+      id: 3,
+      image: "",
+      text: "",
+      date: "",
+      lesson_num: 0,
+      title: "",
+      author: 0,
+    },
+    {
+      id: 4,
+      image: "https://tinypng.com/images/social/website.jpg",
+      text: "",
+      date: "",
+      lesson_num: 0,
+      title: "",
+      author: 0,
+    },
+  ];
+  return <Posts data={MOCK_DATA} />;
 }
 
 export default App;
