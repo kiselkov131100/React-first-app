@@ -1,16 +1,12 @@
-button {
-    width: 234px;
-    height: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border-radius: 20px;
-    cursor: pointer;
-    background-color: gray;
-    color: white;
-  }
-  .btn-reset {
-    background-color: transparent;
-    color: gray;
-    border: none;
-  }
+.button {
+  width: 200px;
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  color: aliceblue;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: blue;
+}

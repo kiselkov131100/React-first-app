@@ -1,7 +1,7 @@
 import React from 'react';
 import { isPropertySignature } from 'typescript';
-import './App.css';
-import Input from './components/Input'
+import PostCard from './components/PostCard';
+import PostsList from "./components/PostsList";
 import Confirmation from "./pages/Confirmation";
 import Login from "./pages/Login";
 
@@ -9,42 +9,43 @@ function App() {
   const MOCK_DATA = [
     {
       id: 1,
-      image: "https://tinypng.com/images/social/website.jpg",
-      text: "",
-      date: "",
+      image: "",
+      text: "string",
+      date: "21.04.2022",
       lesson_num: 0,
-      title: "",
+      title: "What is Lorem ipsum?",
       author: 0,
     },
     {
       id: 2,
-      image: "https://tinypng.com/images/social/website.jpg",
-      text: "",
-      date: "",
+      image: "",
+      text: "string",
+      date: "22.04.2022",
       lesson_num: 0,
-      title: "",
+      title: "What is Lorem ipsum?",
       author: 0,
     },
     {
       id: 3,
       image: "",
-      text: "",
-      date: "",
+      text: "string",
+      date: "23.04.2022",
       lesson_num: 0,
-      title: "",
+      title: "What is Lorem ipsum?",
       author: 0,
     },
     {
       id: 4,
-      image: "https://tinypng.com/images/social/website.jpg",
-      text: "",
-      date: "",
+      image: "",
+      text: "string",
+      date: "24.04.2022",
       lesson_num: 0,
-      title: "",
+      title: "What is Lorem ipsum?",
       author: 0,
     },
   ];
-  return <Posts data={MOCK_DATA} />;
+
+  return <PostsList data={MOCK_DATA} />;
 }
 
 export default App;

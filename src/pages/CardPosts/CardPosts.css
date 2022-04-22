@@ -1,0 +1,17 @@
+.headerPosts {
+  margin: 40px 0;
+}
+
+.cardPosts {
+  margin: 0 70px;
+}
+
+.headerTitle {
+  margin: 15px 0;
+  color: blue;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+}

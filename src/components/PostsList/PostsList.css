@@ -1,0 +1,5 @@
+.postsContainer {
+    margin: 50px 150px;
+    display: flex;
+    flex-wrap: wrap;
+  }

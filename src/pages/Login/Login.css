@@ -1,0 +1,29 @@
+.login {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.iconMenu {
+  margin: 35px;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.dash {
+  margin: 0 10px;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.resetLogin {
+  margin-top: 25px;
+}
