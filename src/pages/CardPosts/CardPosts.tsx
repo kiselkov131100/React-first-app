@@ -1,26 +1,25 @@
 import React from "react";
 import "./CardPosts.css";
 import PostsList from "../../components/PostsList";
+import HeaderPages from "../../components/HeaderPages";
 import Button from "../../components/Button";
+import classnames from "classnames";
+import {Theme, useThemeContext} from './../../context/ThemeModeContext'
 
-const MyPosts = (props: any) => {
+const CardPosts = (props: any) => {
+  const { theme, onChangeTheme = () => {} } = useThemeContext()
+  const isLightTheme = theme === Theme.Light;
+
   return (
-    <div className="cardPosts">
-      <div className="headerPosts">
-     <div>
-        <span className="headerItem">Username</span>
-     </div>
-   
-     
-    </div>
+    <div className={classnames('CardPosts',{['container']: isLightTheme}, {['darkContainer']: !isLightTheme})}>
+      <HeaderPages />
       <div className="titleContainer">
-      <h1 className="headerTitle">My posts</h1> <Button className={'btnAny'} btnContent={'+Add'}/>
-
+      <h1 className="headerTitle">My posts</h1> 
+      <Button className={'btnAny'} btnContent={'+Add'} onClick={() =>{}}/>
       </div>
       <PostsList data={props.data} />
     </div>
-
   );
 };
 
-export default MyPosts;
+export default CardPosts;

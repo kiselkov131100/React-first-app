@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+.headerPages {
+  padding: 20px 150px;
+  text-align: start;
+}
+
+.headerItem {
+  font-size: 24px;
+  color: blue;
+  margin: 10px;
+  font-weight: bold;
+}
+
+#page-wrap {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}

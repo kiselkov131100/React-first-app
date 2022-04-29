@@ -1,5 +1,6 @@
 .confirmation {
-  margin: 100px auto;
+  margin: 0px auto;
+  height: 100vh;
 }
 
 .iconMenu {
@@ -7,7 +8,7 @@
 }
 
 .confirmationContainer {
-  margin: 0px auto;
+  margin: 100px auto;
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -24,3 +25,7 @@ a {
   margin-bottom: 10px;
 }
 
+.title {
+  font-size: 26px;
+  color: blue;
+}
