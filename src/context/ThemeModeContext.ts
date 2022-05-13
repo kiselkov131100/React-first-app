@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { type } from "os";
 
 export enum Theme {
   Light = "light",
