@@ -2,6 +2,13 @@
   margin: 100px auto;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
 }
 
 .iconMenu {
@@ -16,14 +23,9 @@
 
 .dash {
   margin: 0 10px;
-}
-
-.loginContainer {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
+  font-weight: bold;
 }
 
 .resetLogin {
-  margin-top: 25px;
+margin-top: 25px;
 }

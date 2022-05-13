@@ -1,12 +1,58 @@
 .button {
-  width: 200px;
-  height: 30px;
+  width: 234px;
+  height: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 5px 15px;
   font-size: 16px;
+  background-color: blue;
   color: aliceblue;
   border-radius: 20px;
   cursor: pointer;
+}
+.btnTitle {
+  padding: 0;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold;
+  color: gray;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btnAny {
+  margin: 0 15px;
+  padding: 5px 15px;
+  height: 35px;
+  font-size: 14px;
   background-color: blue;
+  color: aliceblue;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btnReset {
+  background-color: transparent;
+  color: blue;
+  border: none;
+  text-align: start;
+  cursor: pointer;
+}
+
+.btnLogin {
+  border-bottom: none;
+  border-left: none;
+  border-top: none;
+  border-right: 3px solid gray;
+  padding-right: 15px;
+}
+
+.btnRegistration {
+  margin-left: 15px;
+  border: none;
+}
+
+.btnTitleActive {
+  color: blue;
 }

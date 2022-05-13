@@ -1,17 +1,27 @@
-import React from 'react';
-import { isPropertySignature } from 'typescript';
-import PostCard from './components/PostCard';
-import PostsList from "./components/PostsList";
+import React, { useState } from "react";
+import "./App.css";
 import Confirmation from "./pages/Confirmation";
-import Login from "./pages/Login";
+import PostsList from "./components/PostsList";
+import CardPosts from "./pages/CardPosts";
+import ContentTitle from "./pages/ContentTitle";
+import Authorization from "./pages/Authorization";
+import Template from './pages/Template'
+import HeaderPages from "./components/HeaderPages";
+import { ThemeModeProvider } from "./context/ThemeModeProvider";
+import { Theme } from "./context/ThemeModeContext";
 
 function App() {
+  const [theme, setTheme] = useState(Theme.Light);
+  const onChangeTheme = (value: Theme) => {
+    setTheme(value);
+  };
+
   const MOCK_DATA = [
     {
       id: 1,
       image: "",
-      text: "string",
-      date: "21.04.2022",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      date: "2022-01-02",
       lesson_num: 0,
       title: "What is Lorem ipsum?",
       author: 0,
@@ -19,8 +29,8 @@ function App() {
     {
       id: 2,
       image: "",
-      text: "string",
-      date: "22.04.2022",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      date: "2022-02-03",
       lesson_num: 0,
       title: "What is Lorem ipsum?",
       author: 0,
@@ -28,8 +38,8 @@ function App() {
     {
       id: 3,
       image: "",
-      text: "string",
-      date: "23.04.2022",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      date: "2022-03-04",
       lesson_num: 0,
       title: "What is Lorem ipsum?",
       author: 0,
@@ -37,15 +47,22 @@ function App() {
     {
       id: 4,
       image: "",
-      text: "string",
-      date: "24.04.2022",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      date: "2021-04-05",
       lesson_num: 0,
       title: "What is Lorem ipsum?",
       author: 0,
     },
   ];
 
-  return <PostsList data={MOCK_DATA} />;
-}
+  return (
+ <ThemeModeProvider theme={theme} onChangeTheme={onChangeTheme}>
+   <div className="App">
+   <CardPosts data={MOCK_DATA} />
+  {/* <Authorization />     */}
+  </div>
+  </ThemeModeProvider>
+    );
+  };
 
 export default App;

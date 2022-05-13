@@ -1,17 +1,16 @@
-.headerPosts {
-  margin: 40px 0;
-}
-
-.cardPosts {
-  margin: 0 70px;
+.CardPosts {
+  margin: auto;
+  height: 100vh;
 }
 
 .headerTitle {
   margin: 15px 0;
   color: blue;
+  font-size: 36px;
 }
 
 .titleContainer {
   display: flex;
   align-items: center;
+  margin-left: 145px;
 }
