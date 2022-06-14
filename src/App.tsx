@@ -10,6 +10,8 @@ import HeaderPages from "./components/HeaderPages";
 import { ThemeModeProvider } from "./context/ThemeModeProvider";
 import { Theme } from "./context/ThemeModeContext";
 import Router from "./pages/Router";
+import { Provider } from "react-redux"
+import { store } from "./redux/store";
 
 function App() {
   const [theme, setTheme] = useState(Theme.Light);
@@ -19,11 +21,13 @@ function App() {
   };
 
   return (
-    <ThemeModeProvider theme={theme} onChangeTheme={onChangeTheme}>
-      <div className="App">
-        <Router />
-      </div>
-    </ThemeModeProvider>
+    <Provider store={store}>
+      <ThemeModeProvider theme={theme} onChangeTheme={onChangeTheme}>
+        <div className="App">
+          <Router />
+       </div>
+      </ThemeModeProvider>
+    </Provider>
   );
 }
 
