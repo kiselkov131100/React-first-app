@@ -1,22 +1,35 @@
 import React from "react";
-import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Route, BrowserRouter, Routes, Navigate } from "react-router-dom";
 import HeaderPages from "../../components/HeaderPages";
-import CardPosts from "../CardPosts";
+import Authorization from "../Authorization";
+import Confirmation from "../Confirmation";
+import ContentTitle from "../ContentTitle";
 import Information from "../Information";
+import MyPosts from "../CardPosts";
+import { AuthSelector } from "../../redux/reducers/authReducer";
 
 const Router = () => {
-  const isLoggedIn = true;
+  const isLoggedIn = useSelector(AuthSelector.getLogStatus);
+
   return (
     <BrowserRouter>
       {isLoggedIn ? (
         <Routes>
           <Route path={"/"} element={<HeaderPages />}>
-            <Route path={"cards-list"} element={<CardPosts />} />
-            <Route path={"info"} element={<Information />} />
+            <Route path={"/cards-list"} element={<MyPosts />}></Route>
+            <Route path={"/cards-list/:id"} element={<ContentTitle />} />
+            <Route path={"/info"} element={<Information />}></Route>
           </Route>
+          <Route path={"*"} element={<Navigate to={"/cards-list"} replace />} />
         </Routes>
       ) : (
-        <Routes></Routes>
+        <Routes>
+          <Route path={"/auth"} element={<Authorization />} />
+          <Route path={"/activate/:uuid/:token"} element={<Confirmation />} />
+
+          <Route path={"*"} element={<Navigate to={"/auth"} replace />} />
+        </Routes>
       )}
     </BrowserRouter>
   );
